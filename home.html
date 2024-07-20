@@ -1,0 +1,83 @@
+<div class="container bl1" >
+    <div class="block" >
+       <h3>Mặc đẹp đón Tết</h3>  <span > 
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" >
+              Sắp Xếp 
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item"  ng-click="sortBy('name')">Tên </a>
+              <a class="dropdown-item"  ng-click="sortBy('price')">Giá Tiền </a>
+            </div>
+          </div>
+         <div>
+            <label ><input type="checkbox" ng-click="loc('even')" >Dưới 200$</label>
+            <label ><input type="checkbox">Trên 200$</label>
+         </div>
+       </span>
+    </div>
+    <div class="row" >
+        <div class="col-sm-3" ng-repeat="pr in products | limitTo:4:0| orderBy:prop |filter :search  " >
+            
+            <a href="#!/buy/{{pr.id}}"><img src="{{pr.largeImg}}" alt="" class="img-fluid"></a>
+            <div style="padding-top: 15px;" >
+                <img src="/Canifa/img/se432.png" alt="" class=" color">
+                <img src="/Canifa/img/sk327.png" alt="" class=" color">               
+            </div>
+            <div > {{pr.name}} </div>
+            <div ng-model="price"> {{pr.price }} $</div>
+            <p ><s> {{pr.cost}} $</s> <span class="bagde bg-danger">- 50%</span></p>
+        </div>
+    </div>
+</div>
+<div class="container bl2">
+    <h3>Sản phẩm mới </h3>
+    <div class="row">
+        
+        <div class="col-sm-3">
+            <a href=""><img src="/Canifa/img/list_image_tablet1703822534.webp" alt=""class="img-fluid"></a>
+            
+        </div>
+        <div class="col-sm-3">
+            <a href=""><img src="/Canifa/img/list_image_tablet_second1703822581.webp" alt="" class="img-fluid"></a>
+            
+        </div>
+        <div class="col-sm-3">
+            <a href=""><img src="/Canifa/img/list_image_tablet_third1703822582.webp" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href=""><img src="/Canifa/img/list_image_tablet_41703822582.webp" alt="" class="img-fluid"></a>
+        </div>
+    </div>
+</div>
+<div class="container bl3">
+    <div class="panel2" style="margin-top: 50px;margin-bottom: 50px;">
+        <a href=""><img src="/Canifa/img/1-do-ni_ldp_desktop-20.1.webp" class="img-fluid"></a>
+    </div>
+    <div class="block" >
+        <h3>Sản Phẩm Đang Hot <span > 
+         <div class="dropdown">
+             <button class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" >
+               Sắp Xếp 
+             </button>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <a class="dropdown-item"  ng-click="sortBy('name')">Tên </a>
+               <a class="dropdown-item"  ng-click="sortBy('price')">Giá Tiền </a>
+             </div>
+           </div>
+        </span></h3> 
+     </div>
+    <div class="row">
+        <div class="col-sm-3 "  ng-repeat="pr in products | limitTo:8:4|orderBy:prop |filter :search">
+            <a href="#!/buy/{{pr.id}}"><img src="{{pr.largeImg}}" alt="" class="img-fluid"></a>
+            
+            <div style="padding-top: 15px;" >
+                <img src="/Canifa/img/se432.png" alt="" class=" color">
+                <img src="/Canifa/img/sk327.png" alt="" class=" color">               
+            </div>
+            <div class="name"> {{pr.name}} </div>
+            <b> {{pr.price}} $</b>
+            <p ><s> {{pr.cost}} $</s> <span class="bagde bg-danger">- 50%</span></p>
+        </div>
+    </div>  
+</div>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canifa1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>  
+  <script src="main.js"></script>   
+  <script src="spa.js"></script> 
+  <link rel="stylesheet" href="/Canifa1/css/cnf.css">
+  <link rel="stylesheet" href="/Canifa1/css/login.css">
+  <link rel="stylesheet" href="/Canifa1/css/manage.css">
+  <link rel="stylesheet" href="/Canifa1/css/cart.css">
+</head>
+<body ng-app="myApp" ng-controller="myController">
+<div class="head" style="background-color: rgb(70, 68, 68);width: 100%;height: 36px;"></div>
+ <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-6">
+    <ul class="nav nav-tabs" id="navId" style="list-style-type: none;">
+        <div class="col-sm-2">
+        <a href="/Canifa1/Canifa.html"><img src="/Canifa/img/logoheader18012024.webp" style="width: 98px;height: 64px;" alt=""></a>
+        </div>
+        <div class="col-sm-2">
+        <li class="nav-item">
+            <a href="#tab5Id" class="nav-link">Mặc Đẹp Đón Tết</a>
+        </li>
+        </div>
+        <div class="col-sm-2">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nữ</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#tab2Id">Action</a>
+                    <a class="dropdown-item" href="#tab3Id">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Action</a>
+                </div>
+            </li>
+        </div>
+        <div class="col-sm-2">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nam</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#tab2Id">Action</a>
+                    <a class="dropdown-item" href="#tab3Id">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Action</a>
+                </div>
+            </li>
+        </div>
+        <div class="col-sm-2">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Trẻ Em</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#tab2Id">Action</a>
+                    <a class="dropdown-item" href="#tab3Id">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Action</a>
+                </div>
+            </li>
+        </div>
+        <div class="col-sm-2">
+            <li class="nav-item">
+                <a href="#tab5Id" class="nav-link">Hàng Mới<i></i></a>
+            </li>
+        </div>
+    </ul> 
+</div>
+<div class="col-sm-6">
+    <div class="row">    
+    <div class="col-sm-6">
+        <ul class="nav nav-tabs" id="navId" style="list-style-type: none;">
+        <nav class="nav-item navbar-light bg-light">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm" ng-model="search"    > 
+            </form> 
+          </nav>
+    </div>
+
+    
+    <div class="col-sm-6">
+    <ul class="nav nav-tabs" id="navId" style="list-style-type: none;">
+        <div class="col-sm-4">
+            <li class="nav-item">
+                <a href="#!/manage" class="nav-link text-center small-text"> <span class="glyphicon glyphicon-home red-icon"></span><br>Quản Lý SP<i></i></a>
+            </li>
+        </div>
+        <div class="col-sm-4">
+            <li class="nav-item">
+                <a href="#!/login" class="nav-link text-center small-text"><span class="glyphicon glyphicon-user red-icon"></span><br>Tài khoản<i></i></a>
+            </li>
+        </div>
+        <div class="col-sm-4">
+            <li class="nav-item">
+                <a href="#!/giohang" class="nav-link text-center small-text"><span class="glyphicon glyphicon-shopping-cart red-icon"></span><br>Giỏ hàng<i></i></a>
+            </li>
+        </div>      
+    </ul>
+</div>
+</div>
+</div>
+  
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+    </div> 
+    </div>
+</div>
+<div class="panel pn1" >
+    <div id="carouselId" class="carousel slide" data-ride="carousel" style="background-color: gray;">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselId" data-slide-to="1"></li>
+            <li data-target="#carouselId" data-slide-to="2"></li>
+            <li data-target="#carouselId" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner text-center" role="listbox" >
+            <div class="carousel-item active">
+                <img src="https://media.canifa.com/Simiconnector/BannerSlider/a/o/ao-dai_top-banner_desktop-18.1.webp" alt="First slide" style="width: 100%; height: 450px;">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.canifa.com/Simiconnector/BannerSlider/3/-/3-chan-bong_top-banner_desktop-18.1.webp" alt="Second slide" style="width: 100%; height: 450px;">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.canifa.com/Simiconnector/BannerSlider/4/-/4-giu-nhiet_top-banner_desktop-18.1.webp" alt="Third slide" style="width: 100%; height: 450px;">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.canifa.com/Simiconnector/BannerSlider/1/-/1-mddt_top-banner_desktop-18.1.webp" alt="Fore slide" style="width: 100%; height: 450px;">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</div>
+<br>
+<div class="container service">
+    <div class="row" >
+    <div class="col-sm-4" style="display: flex; ">
+        <div class="icon"><img src="/Canifa/img/service1.png" alt="" width="44px" height="44px"> </div>
+        <div class="content" style="margin-left: 10px;">
+            <h3 >Thanh toán khi nhận hàng</h3>
+            <span>Giao hàng toàn quốc</span>
+        </div>
+    </div>
+    <div class="col-sm-4" style="display: flex; ">
+        <div class="icon"><img src="/Canifa/img/service2.png" alt="" width="44px" height="44px"> </div>
+        <div class="content" style="margin-left: 10px;">
+            <h3 >Miễn phí giao hàng</h3>
+            <span>Với đơn hàng trên 599.000đ</span>
+        </div>
+    </div>
+    <div class="col-sm-4" style="display: flex; ">
+        <div class="icon"><img src="/Canifa/img/service3.png" alt="" width="44px" height="44px"> </div>
+        <div class="content" style="margin-left: 10px;">
+            <h3 >Đổi hàng miễn phí</h3>
+            <span>Trong 30 ngày kể từ ngày mua</span>
+        </div>
+    </div>
+</div>
+<hr>
+</div> 
+
+
+<!-- Nội Dung Chính  -->
+<div ng-view></div>
+<!-- Nội Dung Chính  -->
+
+
+<div class="container bl4">
+    <div class="panel3" style="margin-top: 50px;margin-bottom: 50px;">
+        <a href=""><img src="/Canifa/img/2-ao-khoac_ldp_desktop-20.1.webp" alt="" class="img-fluid"></a>
+    </div>
+    <div class="block" >
+        <h3>Siêu Phẩm Mùa Đông <span > 
+         <div class="dropdown">
+             <button class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" >
+               Sắp Xếp 
+             </button>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               <a class="dropdown-item"  ng-click="sortBy('name')">Tên </a>
+               <a class="dropdown-item"  ng-click="sortBy('price')">Giá Tiền </a>
+             </div>
+           </div>
+        </span></h3> 
+     </div>
+    <div class="row">
+        <div class="col-sm-3 " ng-repeat="pr in products | limitTo:8:12|orderBy:prop  " >
+            <a href="#!/buy/{{pr.id}}"><img src=" {{pr.largeImg}} " alt="" class="img-fluid"></a>
+            <div style="padding-top: 15px;" >
+                <img src="/Canifa/img/se432.png" alt="" class=" color">
+                <img src="/Canifa/img/sk327.png" alt="" class=" color">               
+            </div>
+            <div class="name"> {{pr.name}} </div>
+            <div ng-model="price"> {{pr.price}} $</div>
+            <p ><s> {{pr.cost}} $</s> <span class="bagde bg-danger">- 50%</span></p>
+        </div>   
+    </div> 
+</div> 
+ <div class="container blog " style="margin-top: 20px;">
+    <div class="">
+        <h3>CANIFALIFE</h3> 
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href=""><img src="/Canifa/img/game-online-1.webp" alt="" class="img-fluid"></a>
+            <div class="content">
+                <a href=""><h2>Sự Kiện Độc Quyền <br>Canifa X Tiktok duy 
+                    nhất<br> trong tháng 11 ngày hội <br>siêu thương hiệu</h2></a>
+            </div>
+        </div>
+    <div class="col-sm-3">
+        <a href=""><img src="/Canifa/img/game-online-1.webp" alt="" class="img-fluid"></a>
+        <div class="content">
+            <a href=""><h2>Đồ Đẹp Giá Hời Sắm<br>Sửa Thảnh Thơi Cùng
+                <br> Siêu Hội Voucher Nhà <br>Canifa</h2></a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <a href=""><img src="/Canifa/img/route-tour-blog.webp" alt="" class="img-fluid"></a>
+        <div class="content">
+            <a href=""><h2>Đồng Giá 149K-199K
+                <br> Toàn Bộ Cửa Hàng</h2></a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <a href=""><img src="/Canifa/img/bts-blog-cover.webp" alt="" class="img-fluid"></a>
+        <div class="content">
+            <a href=""><h2>Cùng Canifa Vui Đến 
+                <br>Trường- Khui Ngàn Deal  <br>Ấn Tượng</h2></a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container ft1">
+    <div class="text-center">
+        <p style="color:#333F48 ;font-weight: bolder;font-size: 24px;">Đăng Ký Nhận Bản Tin</p>
+        <p style="color:#73727D ;font-size: 18px;">Cùng Canifa Blog cập nhật những thông tin mới nhất về thời trang và phong cách sống.</p>
+    </div>
+        <div class="dangky text-center" >
+            <input type="text" placeholder="Nhập email đăng ký của bạn" style="width: 420px;height: 40px;">
+            <button style="width: 100px; height: 40px;background-color: #DA291C; "> Đăng Ký</button>
+        </div>
+        <div class="row social">
+            <div class="icon "><a href="https://www.facebook.com/canifa.fanpage"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></div>  
+            <div class="icon"><a href="https://www.instagram.com/canifa.fashion/"><i class="fa fa-instagram" aria-hidden="true"  ></i></a></div>
+            <div class="icon"><a href="https://www.youtube.com/channel/UCZzlo65QOgtcMHhWsMM8mKw"><i class="fa fa-youtube" aria-hidden="true"  ></i></a></div>
+            <div class="icon"><a href="https://www.tiktok.com/@canifa_online"><i class="fa fa-telegram" aria-hidden="true"></i></a></div>
+        </div>
+ </div>
+ <hr>
+ <div class="container ft2">
+        <div class="row">
+            <div class="col-sm-4">
+                <p style="font-weight: bolder;font-size: 20px;">Công Ty Cổ Phần CAFINA</p>
+                <p>Số ĐKKD: 0107574310, ngày cấp: 23/09/2016,<br>
+                Nơi cấp: Sở Kế hoạch và đầu tư Hà Nội <br>
+                Địa chỉ trụ sở tại số 688 Đường Quang Trung,<br> Phường La Khê, Quận Hà Đông, Thành phố Hà Nội.
+                Địa chỉ liên hệ: P301, tầng 3, tòa nhà GP Invest, số 170 La Thành, Phường Ô Chợ Dừa, Quận Đống Đa, Thành Phố <br> Hà Nội. <br>
+                Điện thoại: +8424 - 7303.0222 <br>
+                Fax: +8424 - 6277.6419 <br>
+                Email: hello@canifa.com <br>
+            </p>
+            <div class="row ">
+                <div class="icon "><a href="https://www.facebook.com/canifa.fanpage"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></div>  
+                <div class="icon"><a href=""><i class="fa fa-instagram" aria-hidden="true"  ></i></a></div>
+                <div class="icon"><a href=""><i class="fa fa-youtube" aria-hidden="true"  ></i></a></div>
+                <div class="icon"><a href=""><i class="fa fa-telegram" aria-hidden="true"></i></a></div>
+            </div>
+            </div>
+            <div class="col-sm-2">
+                
+                <ul>
+                    <p style="font-weight: bolder;font-size: 20px;">Thương hiệu</p>
+                    <li><a href="">Giới Thiệu</a></li>
+                    <li><a href="">Tin Tức </a></li>
+                    <li><a href="">Tuyển Dụng</a></li>
+                    <li><a href="">Với Cộng Đồng</a></li>
+                    <li><a href="">Hệ Thống Cửa Hàng</a></li>
+                    <li><a href="">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                
+                <ul>
+                    <p style="font-weight: bolder;font-size: 20px;">Hỗ Trợ</p>
+                    <li><a href="">Hỏi Đáp</a></li>
+                    <li><a href="">Chính Sách KHTT</a></li>
+                    <li><a href="">Chính Sách Vận Chuyển</a></li>
+                    <li><a href="">Gợi Ý Tìm Size</a></li>
+                    <li><a href="">Kiểm Tra Đơn Hàng</a></li>
+                    <li><a href="">Tra Cứu Điểm Thẻ</a></li>
+                </ul>   
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight: bolder;font-size: 20px;">Tải Ứng Dụng</p>
+                <div class="application " style="display:inline-block ;" >
+                    <img src="/Canifa/img/bancode.png" alt="" style="width: 80px;height: 88px;">
+                    <div class="app" style="display:inline-block ;" >
+                     <img src="/Canifa/img/googleplay.png" alt="" style="width: 88px; height: 44px;">
+                    <img src="/Canifa/img/appstore.png" alt=""style="width: 88px; height: 44px;">
+                </div>
+                </div>
+                <div class="payment">
+                    <p style="font-weight: bolder;font-size: 20px;">Phương Thức Thanh Toán</p>
+                    <div class="row">
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img6.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img7.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img8.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img9.png" alt="" width="50px"></div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;">
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img10.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img12.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img6.png" alt="" width="50px"></div>
+                        <div class="col-sm-3"><img src="/Canifa/img/ft-img14.png" alt="" width="50px"></div>
+                    </div>   
+                </div>
+                </div>
+            </div>
+</div>
+<hr>
+<div class="container-ft3">
+            © 2023 CANIFA
+            <img src="/Canifa/img/bocongthuong.png" alt="" style="position: absolute; right: 0;" >
+</div>
+
+</body>
+</html>

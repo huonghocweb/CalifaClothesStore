@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="article" >
+        
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="product lgimg" style="margin-bottom: 30px;margin-left: 7px;">
+                <img class="img-fluid" src="{{product.largeImg}}" alt="" id="largeImage">
+            </div>
+                <div class="product thumbnail" >                    
+                    <img class="smallimg" src="/Canifa/img/6to23w001-se215-1-thumb.webp" alt="" class="img-fluid"
+                    onclick="swapImage('/Canifa/img/6to23w001-se215-1-thumb.webp')">
+                    <img class="smallimg" src="/Canifa/img/6to23w001-se215-11.jpg" alt="" class="img-fluid"
+                    onclick="swapImage('/Canifa/img/6to23w001-se215-11.jpg')">
+                    <img class="smallimg" src="/Canifa/img/6to23w001-se215-l-1-thumb-u.jpg" alt="" class="img-fluid"
+                    onclick="swapImage('/Canifa/img/6to23w001-se215-l-1-thumb-u.jpg')">
+                    <img class="smallimg" src="/Canifa/img/6to23w001-se215-l-2.webp" alt="" class="img-fluid"
+                    onclick="swapImage('/Canifa/img/6to23w001-se215-l-2.webp')">
+                    <img class="smallimg" src="/Canifa/img/6to23w001-se215-l-3.webp" alt="" class="img-fluid"
+                    onclick="swapImage('/Canifa/img/6to23w001-se215-l-3.webp')"> 
+                </div>
+        </div>
+        <div class="col-sm-6" >
+          <ul class="info">
+            <li> {{product.name}} </li>
+            <li>Mã sp: <mark>6TO23W001</mark></li>
+            <li><h3>{{product.price}} ₫</h3></li>
+            <li ><span style="text-decoration: line-through;margin-right: 5px;">399.000 ₫ </span><span class="bagde bg-danger">-50%</span></li>
+            <li><img src="/Canifa/img/mddt_tag-detail-vc-100k_desktop-18.1.webp" alt="" class="img-fluid"></li>
+            <li>Màu sắc: SK010</li>
+            <li>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="row">
+                <div class="col-sm-4">
+                    <img src="/Canifa/img/sw119.png" alt=""  style="border-radius: 100%;" class="img-fluid">
+                </div>
+                <div class="col-sm-4">
+                    <img src="/Canifa/img/sr200.png" alt="" style=" border-radius: 100%;" class="img-fluid">
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-9"></div>
+            </div>
+            </li>
+            <li>Kích cỡ:</li>
+            <li><div class="row">
+                <div class="col-sm-1">   
+                    <button style="width: 40px;height: 40px; border:1px solid black ;" >S</button>
+                </div>
+                <div class="col-sm-1">   
+                    <button style="width: 40px;height: 40px; border:1px solid black ;" >M</button>
+                </div>
+                <div class="col-sm-1">   
+                    <button style="width: 40px;height: 40px; border:1px solid black ;" >L</button>
+                </div>
+                <div class="col-sm-1">   
+                    <button style="width: 40px;height: 40px; border:1px solid black ;" >XL</button>
+                </div>
+            </div></li>
+            <li><a href="">Gợi ý tìm size</a></li>
+            <button ng-click="buy()">Thêm Vào Giỏ</button>
+            <li ><button style="width: 150px;height: 30px; background-color: red;font-weight: bolder;">Tìm Cửa Hàng</button></li>
+            <li><p>Mô tả</p> </li>
+            <li><p>Áo kiểu nữ dài tay cổ đức, dáng ôm vừa. Chất liệu dệt kim ánh nhũ. <br>
+                Chất liệu dệt kim ánh nhũ, độ đàn hồi tốt, tạo cảm giác thoải mái cho người mặc. <br>
+                Chất liệu <br>
+                Hướng dẫn sử dụng
+            </p>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+
+    </div>
+    <script>
+        function swapImage(src) {
+          document.getElementById("largeImage").src = src;
+        }
+        </script>
+    </div>
+    <br>

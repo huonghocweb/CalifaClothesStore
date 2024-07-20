@@ -1,0 +1,36 @@
+<div class="text-center" style="font-weight: bolder; font-size: 40px;">Giỏ Hàng</div>
+<div class="container">
+    <div class="row" >
+        <div class="col-sm-8 offset-sm-2"> 
+            <div class="card">
+            
+                <div class="card-body">
+                    <table class="table table-bodered" >
+                        <thead>
+                            <tr>
+                                <td>Hình Ảnh </td>
+                                <td>Tên Sản Phẩm</td>
+                                <td>Giá Tiền</td>
+                                <td>Số Lượng </td>
+                                <td>Thành Tiền </td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                            <tr ng-repeat="it in items " ng-init="it.quantity=1">
+                                <td> <img src="{{it.largeImg}}" style="width: 120px;height: 80px;"> </td>
+                                <td>{{it.name}} </td>
+                                <td>{{it.price | currency}} </td>
+                                <td><input type="number" ng-model="it.quantity" style="width: 40px;"></td>
+                                <td>{{it.price * it.quantity | currency}} </td>
+                                <td><button ng-click="deleteIt(it.id)">Xóa</button></td>
+                            </tr>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    Tổng Tiền : {{ getAmount()  | currency}}
+                </div>
+                </div>
+                
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 offset-sm-1">
+            <div class="card">
+                <div class="card-header">
+                    Sản Phẩm Mới 
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label >Hình Ảnh</label> <br>
+                        <input type="text" ng-model="pro.largeImage">
+                    </div>
+                    <div class="form-group">
+                        <label >Mã Sản Phẩm </label> <br>
+                        <input type="text" ng-model="pro.id">
+                    </div>
+                    <div class="form-group">
+                        <label >Tên Sản Phẩm </label> <br>
+                        <input type="text" name="pro.name" ng-model="pro.name">
+                    </div>
+                    <div class="form-group">
+                        <label >Giá Tiền </label> <br>    
+                        <input type="number" ng-model="pro.price">
+                    </div>
+                    
+                </div>
+                <div class="card-footer">
+                    <button ng-click="addPr()" class="bagde bg-primary">Thêm </button>
+                    <button ng-click="delPr(pro.id)" class="bagde bg-danger">Xóa </button>
+                    
+                </div>
+            </div>
+                             
+        </div>
+        <div class="col-sm-6 ">
+            <div class="card">
+            <div class="card-header text-center">
+               <h1> Quản Lý Sản Phẩm </h1>
+            </div>
+            <input type="text" ng-model="search" placeholder="Tìm Kiếm" style="width: 200px;">
+            <div class="card-body">
+                <table class="table table-bodered">
+                    <thead>
+                        <tr>
+                            <td>Hình Ảnh </td>
+                            <td>Mã Sản Phẩm</td>
+                            <td>Tên Sản Phẩm</td>
+                            <td>Giá Bán </td>    
+                            <td></td>
+                        </tr>
+                    </thead>
+                        <tbody>
+                        <tr ng-repeat="pr in products |limitTo:8:begin |filter:search">
+                            <td><img src="{{pr.largeImg}}" style="width: 80px;height: 60px;"></td>
+                            <td> {{pr.id}} </td>
+                            <td> {{pr.name}} </td>
+                            <td> {{pr.price | currency}} </td>
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                 data-target="#myModal " ng-click="editPr(pr.id)">
+                               Sửa
+                              </button></td>
+                            <!-- <td><input type="text" ng-model="pr.id"></td>
+                            <td><input type="text" ng-model="pr.name"></td> 
+                            <td><input type="number" ng-model="pr.price"></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-footer text-center">
+                <button  ng-click="prev()">Prev</button>
+                <button  ng-click="next()">Next</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Cập Nhật Thông Tin Sản Phẩm</h4>
+        </div>
+        <div class="modal-body" style="background-color: rgb(176, 187, 183);">
+            <div class="row">
+                <div class="col-sm-7 ">
+                    <label >ID : </label> <br>
+                    <input type="text" name="editProduct.id" ng-model="editProduct.id"> <br>
+                    <label >Tên Sản Phẩm: </label> <br>
+                    <input type="text" name="editProduct.name" ng-model="editProduct.name"> <br>
+                    <label >Giá Tiền  : </label> <br>
+                    <input type="number" name="editProduct.price" ng-model="editProduct.price">
+            </div>
+           <div class="col-sm-4 ">
+            <label class="label-primary"><img src="{{editProduct.largeImg}}" class="img-fluid"></label>
+            
+           </div>
+        </div>
+    </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="updatePr()">Cập Nhật</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
